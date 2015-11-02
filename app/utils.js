@@ -12,6 +12,13 @@ var Utils = {
                 }, timeLimit);
             };
         }
+    },
+
+    Math: {
+        interpolate(value, oldMin, oldMax, newMin, newMax) {
+            let ratio = (value - oldMin) / (oldMax - oldMin);
+            return newMin + ratio * (newMax - newMin);
+        }
     }
 };
 
